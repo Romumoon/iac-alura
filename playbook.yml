@@ -1,8 +1,9 @@
 - hosts: terraform-ansible
   tasks:
-  - name: Creating index file
-    copy:
-      dest: /home/ubuntu/index.html
-      content: <h1>Que vontade de ser amado</h1>
-  - name: Creating server
-    shell: "nohup busybox httpd -f -p 8080 &"
+  - name: Installing python3 and virtualenv
+    apt:
+      pkg:
+      - python3
+      - virtualenv
+      update_cache: yes
+    become: yes

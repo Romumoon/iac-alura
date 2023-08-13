@@ -23,6 +23,6 @@ resource "aws_instance" "app_server" {
   # user_data = "${file("init.sh")}"
 
   tags = {
-    Name = "Maquina do Romumu V2"
+    Name = "Maquina do Romumu - Python3"
   }
 }
