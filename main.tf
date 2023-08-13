@@ -20,7 +20,7 @@ resource "aws_instance" "app_server" {
   ami           = "ami-03f65b8614a860c29"
   instance_type = "t2.micro"
   key_name = "iac-alura"
-  user_data = "${file("init.sh")}"
+  # user_data = "${file("init.sh")}"
 
   tags = {
     Name = "Maquina do Romumu V2"
