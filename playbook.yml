@@ -13,3 +13,11 @@
       name:
         - django
         - djangorestframework
+  - name: Starting project
+    shell: '. /home/ubuntu/romumu/venv/bin/activate; django-admin startproject setup /home/ubuntu/romumu/'
+  - name: Changing settings hosts
+    lineinfile:
+      path: /home/ubuntu/romumu/setup/settings.py
+      regexp: 'ALLOWED_HOSTS'
+      line: 'ALLOWED_HOSTS = ["*"]'
+      backrefs: yes 
